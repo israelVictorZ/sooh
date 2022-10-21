@@ -2,7 +2,7 @@
 </head>
 
 <body>
-    <?php include 'includes/header.php'; ?>
+    <?php include 'includes/components/header.php'; ?>
 
 
 
