@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /404.php
+Disallow: /includes/
+Disallow: /src/
+
+
+Sitemap: https://www.dominio.com.br/sitemap.xml
