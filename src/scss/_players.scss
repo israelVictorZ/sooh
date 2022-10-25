@@ -1,0 +1,87 @@
+.playerArea {
+    padding: 100px 0;
+
+    .playerIcon {
+        @extend .flexCenter;
+        justify-content: flex-start;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .icon {
+            position: relative;
+            min-width: 100px;
+            height: 100px;
+            background-image: #{$degrade1};
+            @extend .flexCenter;
+            border-radius: 50%;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: calc(100px - 10px);
+                height: calc(100px - 10px);
+                background-color: $bgColor2;
+                top: 5px;
+                left: 5px;
+                z-index: 1;
+                border-radius: 50%;
+            }
+
+            img {
+                position: relative;
+                z-index: 2;
+                width: 50px;
+                height: 50px;
+                object-fit: contain;
+            }
+        }
+
+        .name {
+            position: relative;
+            padding-left: 10px;
+            font-size: $fontSubtitle - 4px;
+            height: 100px;
+            width: 100%;
+            @extend .flexCenter;
+            justify-content: flex-start;
+
+            .nameEffect {
+                position: absolute;
+                left: -13px;
+                top: 50%;
+                transform: translateY(-50%) scaleX(0);
+                transform-origin: left;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                @extend .flexCenter;
+                justify-content: flex-start;
+                transition: 0.3s;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            span {
+                color: setTextColor($bgColor);
+            }
+        }
+
+        &.active {
+            .name {
+                .nameEffect {
+                    transform: translateY(-50%) scaleX(1);
+                }
+            }
+        }
+    }
+}
