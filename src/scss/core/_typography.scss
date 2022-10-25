@@ -1,0 +1,17 @@
+.titleArea {
+    small {
+        font-size: $fontSubtitle - 8px;
+        font-weight: 600;
+        color: setTextColor($bgColor);
+        text-transform: uppercase;
+    }
+
+    @for $i from 1 through 6 {
+        h#{$i} {
+            font-size: $fontTitle - 2 * $i;
+            font-weight: 600;
+            color: setTextColor($bgColor);
+            margin-bottom: 50px;
+        }
+    }
+}
