@@ -20316,7 +20316,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.flexCenter, .playerArea .playerIcon .name .nameEffect, .playerArea .playerIcon .name, .playerArea .playerIcon .icon, .playerArea .playerIcon, header {
+.flexCenter, .playerArea .team .player .playerChar, .playerArea .playerIcon .name .nameEffect, .playerArea .playerIcon .name, .playerArea .playerIcon .icon, .playerArea .playerIcon, header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20399,6 +20399,33 @@ header .navbarArea a.active {
 .playerArea {
   padding: 100px 0;
 }
+@media (max-width: 1400px) {
+  .playerArea {
+    padding: 100px;
+  }
+}
+@media (max-width: 1200px) {
+  .playerArea .col-xl-4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 992px) {
+  .playerArea {
+    padding: 100px 50px;
+  }
+}
+@media (max-width: 767px) {
+  .playerArea {
+    padding: 50px 50px;
+  }
+}
+@media (max-width: 600px) {
+  .playerArea {
+    padding: 50px 30px;
+  }
+}
 .playerArea .playerIcon {
   justify-content: flex-start;
   cursor: pointer;
@@ -20407,6 +20434,14 @@ header .navbarArea a.active {
 }
 .playerArea .playerIcon:last-child {
   margin-bottom: 0;
+}
+@media (max-width: 1200px) {
+  .playerArea .playerIcon {
+    width: 350px;
+  }
+  .playerArea .playerIcon:last-child {
+    margin-bottom: 40px;
+  }
 }
 .playerArea .playerIcon .icon {
   position: relative;
@@ -20443,27 +20478,92 @@ header .navbarArea a.active {
 }
 .playerArea .playerIcon .name .nameEffect {
   position: absolute;
-  left: -13px;
+  left: -18px;
   top: 50%;
   transform: translateY(-50%) scaleX(0);
   transform-origin: left;
   z-index: -1;
   width: 100%;
-  height: 100%;
+  height: 80px;
   object-fit: contain;
   justify-content: flex-start;
   transition: 0.3s;
 }
 .playerArea .playerIcon .name .nameEffect img {
-  width: 100%;
+  width: auto;
   height: 100%;
   object-fit: contain;
+}
+@media (max-width: 1200px) {
+  .playerArea .playerIcon .name .nameEffect {
+    height: 70px;
+  }
 }
 .playerArea .playerIcon .name span {
   color: #FFF;
 }
 .playerArea .playerIcon.active .name .nameEffect {
   transform: translateY(-50%) scaleX(1);
+}
+.playerArea .team {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.playerArea .team .player {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: -100px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.playerArea .team .player .playerChar {
+  background-image: linear-gradient(135deg, #180037 25%, #0DE206);
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+.playerArea .team .player .playerChar .statsArea {
+  position: relative;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  background-color: #2C2C2C;
+  border-radius: 30px;
+}
+.playerArea .team .player .playerChar .statsArea .charImg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
+  transition: 0.3s;
+}
+.playerArea .team .player .playerChar .statsArea .charImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0 0 30px 30px;
+  transition: 0.3s;
+}
+.playerArea .team .player .playerChar.active {
+  width: 100%;
+  margin-top: 100px;
+}
+.playerArea .team .player .playerChar.active .statsArea .charImg {
+  height: 150%;
+}
+.playerArea .team .player .playerChar.active .statsArea .charImg img {
+  filter: drop-shadow(10px 0px 0px #170535);
+}
+.playerArea .team .player.active {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
 }
 
 /*# sourceMappingURL=style.css.map */
