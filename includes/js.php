@@ -5,6 +5,7 @@
 
 <!-- Template JS -->
 <script src="dist/js/main.js" type="text/javascript"></script>
+<script src="dist/js/players.js" type="text/javascript"></script>
 
 <!-- Seus arquivos JS -->
 <script src="dist/js/slider.js" type="text/javascript"></script>
