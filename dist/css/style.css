@@ -20316,7 +20316,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.flexCenter, .playerArea .team .player .playerChar, .playerArea .playerIcon .name .nameEffect, .playerArea .playerIcon .name, .playerArea .playerIcon .icon, .playerArea .playerIcon, header {
+.flexCenter {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20366,33 +20366,113 @@ body {
 }
 
 header {
+  position: relative;
   width: 100%;
   height: 120px;
   padding: 10px;
+  background-color: #2C2C2C;
+}
+header .col-lg-12 {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
+}
+@media (max-width: 1400px) {
+  header {
+    padding: 10px 100px;
+  }
+}
+@media (max-width: 992px) {
+  header {
+    padding: 10px 50px;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    padding: 10px 30px;
+  }
 }
 header .brandImg {
   width: auto;
-  height: 100%;
+  height: 100px;
 }
 header .brandImg img {
   width: auto;
   height: 100%;
   object-fit: contain;
 }
-header .navbarArea {
+@media (max-width: 992px) {
+  header .toggle {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 992px) and (max-width: 600px) {
+  header .toggle {
+    right: 30px;
+  }
+}
+@media (max-width: 992px) {
+  header .toggle .hamburger, header .toggle .hamburger::before, header .toggle .hamburger::after {
+    position: relative;
+    width: 50px;
+    height: 4px;
+    background-color: #FFF;
+    border-radius: 3px;
+    transition: 0.3s;
+  }
+  header .toggle .hamburger::before, header .toggle .hamburger::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  header .toggle .hamburger::before {
+    transform: translateY(-10px);
+  }
+  header .toggle .hamburger::after {
+    transform: translateY(10px);
+  }
+}
+@media (max-width: 992px) {
+  header .toggle.active .hamburger, header .toggle.active .hamburger::before, header .toggle.active .hamburger::after {
+    background-color: transparent;
+    width: 40px;
+  }
+  header .toggle.active .hamburger::before {
+    transform: rotate(45deg);
+    background-color: #fff;
+  }
+  header .toggle.active .hamburger::after {
+    transform: rotate(315deg);
+    background-color: #fff;
+  }
+}
+@media (max-width: 992px) {
+  header nav {
+    display: none;
+  }
+}
+header nav .navbarArea {
   list-style: none;
   display: flex;
 }
-header .navbarArea li {
+header nav .navbarArea li {
   margin-left: 30px;
 }
-header .navbarArea a {
+header nav .navbarArea a {
   color: #FFF;
   padding: 10px 0;
   font-size: 18px;
 }
-header .navbarArea a.active {
+header nav .navbarArea a.active {
   font-weight: 700;
 }
 
@@ -20427,6 +20507,8 @@ header .navbarArea a.active {
   }
 }
 .playerArea .playerIcon {
+  display: flex;
+  align-items: center;
   justify-content: flex-start;
   cursor: pointer;
   width: 100%;
@@ -20448,6 +20530,9 @@ header .navbarArea a.active {
   min-width: 100px;
   height: 100px;
   background-image: linear-gradient(135deg, #180037 25%, #0DE206);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
 }
 .playerArea .playerIcon .icon::after {
@@ -20474,6 +20559,8 @@ header .navbarArea a.active {
   font-size: 20px;
   height: 100px;
   width: 100%;
+  display: flex;
+  align-items: center;
   justify-content: flex-start;
 }
 .playerArea .playerIcon .name .nameEffect {
@@ -20486,6 +20573,8 @@ header .navbarArea a.active {
   width: 100%;
   height: 80px;
   object-fit: contain;
+  display: flex;
+  align-items: center;
   justify-content: flex-start;
   transition: 0.3s;
 }
@@ -20526,6 +20615,9 @@ header .navbarArea a.active {
   height: 200px;
   border-radius: 30px;
   margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: 0.3s;
 }
 @media (max-width: 767px) {
@@ -20568,6 +20660,13 @@ header .navbarArea a.active {
 .playerArea .team .player .playerChar.active {
   width: 100%;
   margin-top: 100px;
+}
+@media (max-width: 767px) {
+  .playerArea .team .player .playerChar.active {
+    height: 600px;
+    width: 100%;
+    margin-top: 50px;
+  }
 }
 .playerArea .team .player .playerChar.active .statsArea .charImg img {
   height: 140%;
