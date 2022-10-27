@@ -20528,6 +20528,13 @@ header .navbarArea a.active {
   margin-bottom: 30px;
   transition: 0.3s;
 }
+@media (max-width: 767px) {
+  .playerArea .team .player .playerChar {
+    height: 600px;
+    width: 100%;
+    margin-top: 50px;
+  }
+}
 .playerArea .team .player .playerChar .statsArea {
   position: relative;
   width: calc(100% - 10px);
@@ -20540,8 +20547,10 @@ header .navbarArea a.active {
   bottom: 0;
   left: 0;
   width: auto;
-  height: 100%;
+  height: 200px;
   transition: 0.3s;
+  display: flex;
+  align-items: flex-end;
 }
 .playerArea .team .player .playerChar .statsArea .charImg img {
   width: 100%;
@@ -20550,14 +20559,18 @@ header .navbarArea a.active {
   border-radius: 0 0 30px 30px;
   transition: 0.3s;
 }
+@media (max-width: 767px) {
+  .playerArea .team .player .playerChar .statsArea .charImg img {
+    height: 140%;
+    filter: drop-shadow(10px 0px 0px #170535);
+  }
+}
 .playerArea .team .player .playerChar.active {
   width: 100%;
   margin-top: 100px;
 }
-.playerArea .team .player .playerChar.active .statsArea .charImg {
-  height: 150%;
-}
 .playerArea .team .player .playerChar.active .statsArea .charImg img {
+  height: 140%;
   filter: drop-shadow(10px 0px 0px #170535);
 }
 .playerArea .team .player.active {
