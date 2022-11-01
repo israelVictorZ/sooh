@@ -123,6 +123,14 @@
         width: 100%;
         height: 100%;
 
+        @media #{$xl} {
+            height: 800px;
+        }
+
+        @media #{$md} {
+            height: 2000px;
+        }
+
         .player {
             position: absolute;
             width: 100%;

@@ -20316,12 +20316,6 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.flexCenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .titleArea small, .titleArea .small {
   font-size: 16px;
   font-weight: 600;
@@ -20363,6 +20357,15 @@ body {
   font-weight: 600;
   color: #FFF;
   margin-bottom: 50px;
+}
+
+.textArea p {
+  color: #FFF;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.textArea p:last-child {
+  margin-bottom: 0;
 }
 
 header {
@@ -20599,6 +20602,16 @@ header nav .navbarArea a.active {
   width: 100%;
   height: 100%;
 }
+@media (max-width: 1200px) {
+  .playerArea .team {
+    height: 800px;
+  }
+}
+@media (max-width: 767px) {
+  .playerArea .team {
+    height: 2000px;
+  }
+}
 .playerArea .team .player {
   position: absolute;
   width: 100%;
@@ -20676,6 +20689,49 @@ header nav .navbarArea a.active {
   left: 0;
   opacity: 1;
   visibility: visible;
+}
+
+.aboutArea {
+  background-color: #2C2C2C;
+}
+.aboutArea .col-lg-6:last-child {
+  padding: 0;
+}
+.aboutArea .aboutContent {
+  padding: 100px 0;
+}
+@media (max-width: 1400px) {
+  .aboutArea .aboutContent {
+    padding: 100px;
+  }
+}
+@media (max-width: 992px) {
+  .aboutArea .aboutContent {
+    padding: 100px 50px;
+  }
+}
+@media (max-width: 767px) {
+  .aboutArea .aboutContent {
+    padding: 50px 50px;
+  }
+}
+@media (max-width: 600px) {
+  .aboutArea .aboutContent {
+    padding: 50px 30px;
+  }
+}
+.aboutArea .imgArea {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aboutArea .imgArea img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleY(1.05);
 }
 
 /*# sourceMappingURL=style.css.map */
