@@ -4,6 +4,7 @@
         font-weight: 600;
         color: setTextColor($bgColor);
         text-transform: uppercase;
+        letter-spacing: 2px;
     }
 
     @for $i from 1 through 6 {

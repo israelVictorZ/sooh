@@ -20321,6 +20321,7 @@ body {
   font-weight: 600;
   color: #FFF;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 .titleArea h1, .titleArea .h1 {
   font-size: 30px;
@@ -20366,6 +20367,47 @@ body {
 }
 .textArea p:last-child {
   margin-bottom: 0;
+}
+
+.buttonStyle {
+  position: relative;
+  display: inline-block;
+  padding: 16px 60px;
+  border: 2px solid #170535;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+@media (max-width: 992px) {
+  .buttonStyle {
+    background-color: #170535;
+  }
+}
+@media (max-width: 600px) {
+  .buttonStyle {
+    width: 100%;
+    text-align: center;
+  }
+}
+.buttonStyle::after {
+  content: "";
+  background-color: #170535;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  transition: 0.3s;
+}
+.buttonStyle:hover {
+  color: #fff;
+}
+.buttonStyle:hover::after {
+  width: 100%;
 }
 
 header {
@@ -20732,6 +20774,51 @@ header nav .navbarArea a.active {
   height: 100%;
   object-fit: cover;
   transform: scaleY(1.05);
+}
+
+.coachArea {
+  padding: 100px 0;
+}
+@media (max-width: 1400px) {
+  .coachArea {
+    padding: 100px;
+  }
+}
+@media (max-width: 992px) {
+  .coachArea {
+    padding: 100px 50px;
+  }
+  .coachArea .row {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 767px) {
+  .coachArea {
+    padding: 50px 50px;
+  }
+}
+@media (max-width: 600px) {
+  .coachArea {
+    padding: 50px 30px;
+  }
+}
+.coachArea .imgArea {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 992px) {
+  .coachArea .imgArea {
+    margin-top: 50px;
+  }
+}
+.coachArea .imgArea img {
+  width: 90%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(10px 0px 0px #170535);
 }
 
 /*# sourceMappingURL=style.css.map */

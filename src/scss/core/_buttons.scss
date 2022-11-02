@@ -1,0 +1,41 @@
+.buttonStyle {
+    position: relative;
+    display: inline-block;
+    padding: 16px 60px;
+    border: 2px solid $secondaryColor;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    overflow: hidden;
+    transition: .3s;
+
+    @media #{$lg} {
+        background-color: $secondaryColor;
+    }
+
+    @media #{$sm} {
+        width: 100%;
+        text-align: center;
+    }
+
+    &::after {
+        content: '';
+        background-color: $secondaryColor;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        z-index: -1;
+        transition: .3s;
+    }
+
+    &:hover {
+        color: $white;
+
+        &::after {
+            width: 100%;
+        }
+    }
+}

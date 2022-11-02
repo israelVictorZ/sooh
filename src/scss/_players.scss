@@ -182,7 +182,7 @@
 
                             @media #{$md} {
                                     height: 140%;
-                                    filter: drop-shadow(10px 0px 0px $SecondaryColor);
+                                    filter: drop-shadow(10px 0px 0px $secondaryColor);
                             }
                         }
                     }
@@ -202,7 +202,7 @@
                         .charImg {
                             img {
                                 height: 140%;
-                                filter: drop-shadow(10px 0px 0px $SecondaryColor);
+                                filter: drop-shadow(10px 0px 0px $secondaryColor);
                             }
                         }
                     }
