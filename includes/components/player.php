@@ -238,7 +238,7 @@
                         <div class="playerChar">
                             <div class="statsArea">
                                 <div class="charImg">
-                                    <img src="src/img/char/top/ornn.png">
+                                    <img src="src/img/char/adc/draven.png">
                                 </div>
                             </div>
                         </div>
@@ -284,7 +284,7 @@
                         <div class="playerChar active">
                             <div class="statsArea">
                                 <div class="charImg">
-                                    <img src="src/img/char/top/ornn.png">
+                                    <img src="src/img/char/coach/nidalle.png">
                                 </div>
                             </div>
                         </div>
@@ -292,7 +292,7 @@
                         <div class="playerChar">
                             <div class="statsArea">
                                 <div class="charImg">
-                                    <img src="src/img/char/top/ornn.png">
+                                <img src="src/img/char/coach/riven.png">
                                 </div>
                             </div>
                         </div>
@@ -300,7 +300,7 @@
                         <div class="playerChar">
                             <div class="statsArea">
                                 <div class="charImg">
-                                    <img src="src/img/char/top/ornn.png">
+                                <img src="src/img/char/coach/volibear.png">
                                 </div>
                             </div>
                         </div>
